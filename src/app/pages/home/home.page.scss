@@ -1,0 +1,23 @@
+swiper-container {
+  width: 100%;
+  height: 12rem;
+}
+
+swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  background: no-repeat;
+  border-radius: 10px;
+}
+
+ion-toolbar.bg-color{
+  --background:  #f1f1f199;
+}

@@ -1,0 +1,50 @@
+<app-header>
+  <ion-toolbar class="bg-color">
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button size="large">
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button size="large" [routerLink]="['/login']">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-content color="light">
+    <ion-grid>
+      <!-- row1 -->
+      <ion-row>
+        <ion-col>
+          <!-- banner -->
+          <swiper-container
+            [spaceBetween]="10"
+            [speed]="1000"
+            [loop]="true"
+            [pagination]="true"
+          >
+            <swiper-slide *ngFor="let item of images"
+              ><img class="banner" [src]="item" alt=""
+            /></swiper-slide>
+          </swiper-container>
+        </ion-col>
+      </ion-row>
+      <!-- row 2 -->
+      <!-- popular deals section -->
+      <ion-row>
+        <ion-col class="flex justify-between px-3">
+         <app-popular-deals></app-popular-deals>
+        </ion-col> 
+      </ion-row>
+      <ion-row>
+        <ion-col class="flex justify-between px-3">
+         <app-categories></app-categories>
+        </ion-col> 
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  <app-footer></app-footer>
+</app-header>
+

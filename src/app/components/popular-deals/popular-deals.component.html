@@ -1,0 +1,22 @@
+<div class="p-2 bg-light">
+  <div class="flex justify-between px-3">
+    <p class="font-sans font-semibold">Popular Deals</p>
+    <p class="font-sans font-semibold"><a>Show All</a></p>
+  </div>
+  <swiper-container [spaceBetween]="10" [slidesPerView]="3" [speed]="1000">
+    <swiper-slide class="" *ngFor="let item of images">
+      <div class="min-h-24 h-28 w-28 rounded-md shadow-lg">
+        <img class="banner" [src]="item" alt="" />
+      </div>
+      <ion-col>
+        <ion-text class="font-medium text-base text-gray-800">Product title</ion-text> <br>
+        <ion-text class="font-light text-xs">$450</ion-text>
+      </ion-col>
+    </swiper-slide>
+    <Swiper-slide>
+      <div class=" text-6xl">
+          <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+      </div>
+    </Swiper-slide>
+  </swiper-container>
+</div>

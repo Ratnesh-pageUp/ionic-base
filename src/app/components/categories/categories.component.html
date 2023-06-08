@@ -1,0 +1,23 @@
+<div class="p-2"> 
+  <ion-col class="px-3">
+    <ion-text class="font-sans font-semibold">Category</ion-text>
+  </ion-col>
+</div>
+
+<div class="container">
+  <table>
+    <tbody>
+      <tr>
+        <ion-grid>
+          <ion-row class="scroll">
+            <ion-chip *ngFor="let category of categoryArr" size="2">
+              {{ category }}
+            </ion-chip>
+          </ion-row>
+        </ion-grid>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-categories-card></app-categories-card>
