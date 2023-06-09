@@ -1,0 +1,16 @@
+<div class="grid grid-cols-2 gap-3 p-3">
+  <div *ngFor="let image of images;let i = index" [queryParams]="{id:i}" routerLink="/product" class="rounded-md relative shadow-lg shadow-gray-200">
+    <div class="h-56 relative">
+      <img
+        class="object-cover w-100 h-100 rounded-md"
+        [src]="image"
+        alt=""
+      />
+      <div class="absolute top-0 right-0 p-2 text-2xl"><ion-icon name="heart-outline"></ion-icon></div>
+    </div>
+    <div class="absolute bottom-0 p-2">
+      <span>Product title</span><br />
+      <span>Product price</span>
+    </div>
+  </div>
+</div>

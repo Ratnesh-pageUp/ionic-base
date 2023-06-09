@@ -25,6 +25,11 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.p-2{
-    padding: 0.5rem;
+.p-2 {
+  padding: 0.5rem;
+}
+
+ion-chip {
+  --background: #175b86;
+  --color: white;
 }

@@ -1,0 +1,76 @@
+<ion-content>
+  <div class="h-100P bg-zinc-50">
+    <div id="product-image" class="h-50P rounded-b-xl relative">
+      <div class="absolute top-4 left-4 text-white">
+        <ion-button (click)="history.back()" fill="clear">
+          <ion-icon
+            color="light"
+            size="large"
+            name="arrow-back-outline"
+          ></ion-icon>
+        </ion-button>
+      </div>
+      <div class="absolute top-4 right-4 text-white">
+        <ion-button fill="clear">
+          <ion-icon
+            color="light"
+            size="large"
+            slot="icon-only"
+            name="heart-outline"
+          ></ion-icon>
+        </ion-button>
+      </div>
+      <img
+        class="h-full w-full rounded-b-3xl object-cover"
+        src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hpcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60"
+        alt=""
+      />
+    </div>
+    <div id="product-desc" class="px-4 py-2">
+      <div>
+        <h3 class="font-sans text-2xl font-semibold">Product-Title</h3>
+        <span class="mt-2 inline-block font-sans font-medium">$450</span>
+        <span class="ms-2">Sale prce 400$</span>
+      </div>
+      <div class="mt-2 flex justify-between">
+        <div id="color-section">
+          <span class="mt-2">Colour</span>
+          <div class="mt-2 flex space-x-3">
+            <div class="h-7 w-7 rounded-full bg-blue-400 outline outline-gray-300"></div>
+            <div class="h-7 w-7 rounded-full bg-red-400 outline outline-gray-300"></div>
+            <div class="h-7 w-7 rounded-full bg-green-900 outline outline-gray-300"></div>
+          </div>
+        </div>
+        <div id="size-section">
+          <span class="mt-2">Size</span>
+          <div class="mt-2 flex space-x-3">
+            <div class="h-7 w-7 rounded-full text-center outline outline-gray-300">xl</div>
+            <div class="h-7 w-7 rounded-full text-center outline outline-gray-300">m</div>
+            <div class="h-7 w-7 rounded-full text-center outline outline-gray-300">s</div>
+          </div>
+        </div>
+        <div id="quantity-section">
+          <span class="mt-2">Quantity</span>
+          <div class="mt-2 flex space-x-4">
+            <button class="mr-2 h-8 w-8 rounded-lg themeColor text-center text-white">-</button>
+            <p class="text-l m-0 mx-2 p-0 text-center font-bold">3</p>
+            <button class="ml-2 h-8 w-8 rounded-lg themeColor text-center text-white">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <span class="mt-2 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi temporibus nihil, ipsa porro quibusdam deserunt tempora accusamus facere nulla maiores commodi nobis officiis sint fuga culpa dolore magni laudantium. Non.</span>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="floating p-4">
+    <ion-tab-bar class="rounded-lg" slot="bottom">
+      <ion-button (click)="buyNow()" routerLink="/cart" class="h-full w-full buyBtn"
+        >Buy Now</ion-button
+      >
+    </ion-tab-bar>
+  </div>
+</ion-footer>

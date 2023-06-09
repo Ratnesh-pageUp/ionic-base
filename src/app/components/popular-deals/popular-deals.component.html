@@ -1,10 +1,12 @@
-<div class="p-2 bg-light">
-  <div class="flex justify-between px-3">
-    <p class="font-sans font-semibold">Popular Deals</p>
-    <p class="font-sans font-semibold"><a>Show All</a></p>
+<div>
+  <div class="p-2"> 
+    <ion-col class="flex justify-between px-3">
+      <ion-text class="font-sans font-semibold">Popular Deals</ion-text>
+      <ion-text [queryParams]="{category:'popular-deals'}" routerLink="/product-list" class="font-sans font-semibold"><a>Show All</a></ion-text>
+    </ion-col>
   </div>
   <swiper-container [spaceBetween]="10" [slidesPerView]="3" [speed]="1000">
-    <swiper-slide class="" *ngFor="let item of images">
+    <swiper-slide class="" *ngFor="let item of images;let i = index" [queryParams]="{id:i}" routerLink="/product">
       <div class="min-h-24 h-28 w-28 rounded-md shadow-lg">
         <img class="banner" [src]="item" alt="" />
       </div>
@@ -15,7 +17,7 @@
     </swiper-slide>
     <Swiper-slide>
       <div class=" text-6xl">
-          <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          <ion-icon [queryParams]="{category:'popular-deals'}" routerLink="/product-list" name="arrow-forward-circle-outline"></ion-icon>
       </div>
     </Swiper-slide>
   </swiper-container>

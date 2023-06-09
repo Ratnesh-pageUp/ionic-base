@@ -7,13 +7,13 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { PopularDealsComponent } from './popular-deals/popular-deals.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { CategoriesCardComponent } from './categories/categories-card/categories-card.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent,FooterComponent,PopularDealsComponent,CategoriesComponent,CategoriesCardComponent],
-  exports:[HeaderComponent,FooterComponent,PopularDealsComponent,CategoriesComponent],
+  declarations: [HeaderComponent,FooterComponent,PopularDealsComponent,CategoriesComponent,ProductCardComponent],
+  exports:[HeaderComponent,FooterComponent,PopularDealsComponent,CategoriesComponent,ProductCardComponent],
   imports: [
     CommonModule,
     FormsModule,

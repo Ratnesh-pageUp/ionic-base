@@ -1,0 +1,27 @@
+
+  <ion-toolbar class="bg-color">
+    <ion-buttons slot="start">
+      <ion-button size="large" (click)="history.back()" fill="clear">
+        <ion-icon color="dark" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button size="large" routerLink="/cart">
+        <ion-icon color="dark" name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+
+  
+<ion-content [fullscreen]="true">
+  <app-product-card></app-product-card>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingText="Please wait..."
+    ></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+<app-footer></app-footer>

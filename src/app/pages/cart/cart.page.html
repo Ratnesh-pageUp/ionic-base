@@ -1,0 +1,51 @@
+<ion-content class="themeColor">
+  <!-- <div class="h-[100vh] bg-slate-900"> -->
+    <div class="h-92P rounded-b-60px bg-slate-50">
+      <ion-toolbar class="bg-color">
+        <ion-buttons slot="start">
+            <ion-button (click)="history.back()" size="large">
+              <ion-icon color="dark" slot="icon-only" name="arrow-back-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button size="large" [routerLink]="['/login']">
+            <ion-icon color="dark" name="person-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <div id="Products" class="h-80P space-y-3 overflow-y-scroll p-5 text-gray-700">
+        <div *ngFor="let image of images" class="flex h-40 w-full flex-nowrap space-x-2 break-all rounded-lg bg-slate-200 p-3">
+          <div class="h-100P w-40P rounded-md">
+            <img class="h-full w-full rounded-md object-cover" [src]="image" alt="" />
+          </div>
+          <div class="w-60P">
+            <p class="m-0 p-0 text-xl font-semibold tracking-widest">Product title</p>
+            <p class="m-0 p-0 text-l font-medium">Price - 450$ / unit</p>
+            <div class="mt-2 flex">
+              <button class="mr-2 h-8 w-8 themeColor text-center text-white rounded-lg">-</button>
+              <p class="m-0 mx-2 p-0 text-center text-l font-bold">3</p>
+              <button class="ml-2 h-8 w-8 themeColor text-center text-white rounded-lg">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-13P">
+        <div id="price" class="h-full rounded-60 bg-slate-300 p-5">
+          <div class="flex justify-between px-12">
+            <div class="title text-2xl font-normal">Total</div>
+            <div class="value text-2xl font-normal">2500$</div>
+          </div>
+          <div class="flex justify-between px-12">
+            <div class="title text-xl font-normal">Other info</div>
+            <div class="value text-xxl font-normal">....</div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <div id="checkout-button" class="z-1 h-8P">
+      <button class="h-full w-full text-xl font-bold text-white checkoutBtn">Checkout</button>
+    </div>
+  <!-- </div> -->
+</ion-content>
+

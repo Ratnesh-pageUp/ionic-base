@@ -18,6 +18,17 @@ swiper-slide {
   border-radius: 10px;
 }
 
-ion-toolbar.bg-color{
-  --background:  #f1f1f199;
+ion-toolbar.bg-color {
+  --background: #f1f1f199;
+}
+
+.mb-90px {
+  margin-bottom: 90px;
+}
+
+ion-button {
+  // --background: #a80054c5;
+  // --background: #a80054e0;
+  // --background: #14c7c3;
+  --background: #175b86;
 }
